@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --main-color: #8234E9;
+    --secondary-color: #202024;
+    --selected-color: #6446AB;
+}
+
+body {
+    background-color: #000;
+}
+
+.container {
+    position: absolute;
+    width: 60%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 550px;
+    background: var(--main-color);
+    border-radius: 10px;
+}
+
+.container .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    padding: 70px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.content .logo {
+    font-size: 30px;
+}
+
+.content h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.text-sci {
+    transform: translateY(20%);
+}
+
+.social-icons a i {
+    font-size: 22px;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.container .log-box {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background: var(--secondary-color);
+    border-radius: 0 10px 10px 0;
+    overflow: hidden;
+}
+
+.log-box .form-box {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+}
+
+.log-box .form-box.login {
+    transform: translateX(0);
+    transition: transform .6s ease;
+    transition-delay: 0s;
+}
+
+.log-box.active .form-box.login {
+    transform: translateX(430px);
+    transition-delay: 0s;
+}
+
+.log-box .form-box.register {
+    transform: translateX(430px);
+    transition: transform .6s ease;
+    transition-delay: 0s;
+}
+
+.log-box.active .form-box.register {
+    transform: translateX(0);
+    transition-delay: 0s;
+}
+
+.form-box h2 {
+    font-size: 32px;
+    text-align: center;
+}
+
+.form-box .input-box {
+    height: 45px;
+    width: 340px;
+    border-bottom: 2px solid #fff;
+    position: relative;
+    margin: 40px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding-right: 28px;
+    color: var(--cor-texto-menor);
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--cor-texto-menor);
+    pointer-events: none;
+    transition: .5s ease;
+}
+
+.input-box .icon {
+    position: absolute;
+    top: 50%;
+    left: 95%;
+    transform: translateY(-50%);
+    font-size: 17px;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: -5px;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: var(--main-color);
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+}
+
+.btn:hover {
+    background: var(--selected-color);
+    transition: .5s ease;
+}
+
+.form-box .login-register {
+    font-size: 14.5px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.login-register p a {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+.login-register p a:hover {
+    font-weight: 600;
+}
+
+/* Perfil */
+
+.container-profile {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-profile .profile-box {
+    background: var(--main-color);
+    font-size: 30px;
+    text-align: center;
+    padding: 100px;
+    color: #fff;
+    position: relative;
+    border-radius: 10px;
+}
+
+.profile-top {
+    transform: translateY(-50px);
+}
+
+.profile-box i {
+    color: var(--secondary-color);
+    font-size: 100px;
+}
+
+.profile-bottom {
+    background: #fff;
+    padding: 30px 0;
+    margin-right: -100px;
+    margin-left: -100px;
+    margin-bottom: -100px; 
+    border-radius: 10px;
+}
+
+.container-btn {
+    transform: translateY(-50%);
+}
+
+.container-btn .btn-profile {
+    width: 50%;
+    height: 45px;
+    background: var(--secondary-color);
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+}
+
+/* Editar Perfil */
+
+.container-edit {
+    background-color: #000;
+}
+
+.container-edit form {
+    background: var(--secondary-color);
+    padding: 50px;
+    border-radius: 10px;
+    padding-bottom: 20px;
+}
+
+.form-box .links {
+    font-size: 14.5px;
+    font-weight: 500;
+    text-align: center;
+    margin: 25px; 
+}
+
+.links a {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+.links a:hover {
+    font-weight: 600;
+}
+
+.links .back-profile, .delete-profile {
+    margin: 10px;
+}
+
+/* Mensagem */
+
+.container-response {
+    color: #fff;
+    background-color: var(--secondary-color);
+    display: inline-block;
+    padding: 40px;
+    padding-left: 100px;
+    padding-right: 100px;
+    border-radius: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.container-response h2 {
+    margin-bottom: 20px;
+    font-size: 25px;
+}
