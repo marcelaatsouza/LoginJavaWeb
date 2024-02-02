@@ -1,0 +1,9 @@
+CREATE DATABASE db_website;
+
+CREATE TABLE Usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(50) NOT NULL,
+    sobrenome VARCHAR(50) NOT NULL,
+    email VARCHAR(30) NOT NULL,
+    senha VARCHAR(20) NOT NULL
+);
